@@ -1,0 +1,101 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\MapTileAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{74A85BAF-356B-4C3B-B774-4EE192014199}|MapTileAPI\\MapTileAPI.csproj|c:\\users\\admin\\source\\repos\\maptileapi\\maptileapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74A85BAF-356B-4C3B-B774-4EE192014199}|MapTileAPI\\MapTileAPI.csproj|solutionrelative:maptileapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74A85BAF-356B-4C3B-B774-4EE192014199}|MapTileAPI\\MapTileAPI.csproj|c:\\users\\admin\\source\\repos\\maptileapi\\maptileapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{74A85BAF-356B-4C3B-B774-4EE192014199}|MapTileAPI\\MapTileAPI.csproj|solutionrelative:maptileapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74A85BAF-356B-4C3B-B774-4EE192014199}|MapTileAPI\\MapTileAPI.csproj|c:\\users\\admin\\source\\repos\\maptileapi\\maptileapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{74A85BAF-356B-4C3B-B774-4EE192014199}|MapTileAPI\\MapTileAPI.csproj|solutionrelative:maptileapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74A85BAF-356B-4C3B-B774-4EE192014199}|MapTileAPI\\MapTileAPI.csproj|c:\\users\\admin\\source\\repos\\maptileapi\\maptileapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{74A85BAF-356B-4C3B-B774-4EE192014199}|MapTileAPI\\MapTileAPI.csproj|solutionrelative:maptileapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74A85BAF-356B-4C3B-B774-4EE192014199}|MapTileAPI\\MapTileAPI.csproj|c:\\users\\admin\\source\\repos\\maptileapi\\maptileapi\\maptileapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{74A85BAF-356B-4C3B-B774-4EE192014199}|MapTileAPI\\MapTileAPI.csproj|solutionrelative:maptileapi\\maptileapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileAPI\\MapTileAPI\\Program.cs",
+              "RelativeDocumentMoniker": "MapTileAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileAPI\\MapTileAPI\\Program.cs",
+              "RelativeToolTip": "MapTileAPI\\Program.cs",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAAAAsBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T12:58:40.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileAPI\\MapTileAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "MapTileAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileAPI\\MapTileAPI\\appsettings.json",
+              "RelativeToolTip": "MapTileAPI\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-18T07:33:27.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileAPI\\MapTileAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "MapTileAPI\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileAPI\\MapTileAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "MapTileAPI\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAmwCYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-18T06:01:43.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileAPI\\MapTileAPI\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "MapTileAPI\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileAPI\\MapTileAPI\\appsettings.Development.json",
+              "RelativeToolTip": "MapTileAPI\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-18T06:01:34.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MapTileAPI.csproj",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileAPI\\MapTileAPI\\MapTileAPI.csproj",
+              "RelativeDocumentMoniker": "MapTileAPI\\MapTileAPI.csproj",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileAPI\\MapTileAPI\\MapTileAPI.csproj",
+              "RelativeToolTip": "MapTileAPI\\MapTileAPI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-17T13:11:56.271Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

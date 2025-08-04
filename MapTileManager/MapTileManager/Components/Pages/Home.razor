@@ -1,0 +1,67 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<PageTitle>MapTileManager - Ana Sayfa</PageTitle>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="display-4 mb-4">🗺️ MapTileManager</h1>
+            <p class="lead">Offline harita tile'larını yönetmek için kullanılan web arayüzü</p>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">📥 Harita İndirme</h5>
+                </div>
+                <div class="card-body">
+                    <p>MapTileDownloader uygulaması ile harita tile'larını indirin ve burada yönetin.</p>
+                    <ul>
+                        <li>OpenStreetMap tile'larını offline kullanım için indirin</li>
+                        <li>Zoom seviyelerini ve alanı seçin</li>
+                        <li>İndirilen haritaları web arayüzünden görüntüleyin</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">📋 Harita Yönetimi</h5>
+                </div>
+                <div class="card-body">
+                    <p>İndirilen haritaları yönetmek için Maps sayfasını kullanın.</p>
+                    <ul>
+                        <li>Kayıtlı haritaları listeleyin</li>
+                        <li>Offline haritaları görüntüleyin</li>
+                        <li>Harita bilgilerini güncelleyin</li>
+                        <li>Gereksiz haritaları silin</li>
+                    </ul>
+                    <a href="/maps" class="btn btn-primary">Haritaları Görüntüle</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">⚡ Canlı İzleme</h5>
+                </div>
+                <div class="card-body">
+                    <p>Harita indirme işlemlerini canlı olarak izleyin:</p>
+                    <ul>
+                        <li>WebSocket bağlantısı ile gerçek zamanlı ilerleme</li>
+                        <li>İndirme yüzdesi ve kalan tile sayısı</li>
+                        <li>İndirme tamamlandığında otomatik bildirim</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

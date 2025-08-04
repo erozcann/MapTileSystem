@@ -1,0 +1,37 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">MapTileManager</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-column">
+        
+        <div class="nav-item px-3">
+            <NavLink href="/" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Ana Sayfa
+            </NavLink>
+        </div>
+        
+        <div class="nav-item px-3">
+            <NavLink href="/maps">
+                <span class="oi oi-map" aria-hidden="true"></span> Haritalar
+            </NavLink>
+        </div>
+        
+        <div class="nav-item px-3">
+            <NavLink href="/login" Match="NavLinkMatch.All">
+                <span class="oi oi-lock-locked" aria-hidden="true"></span> Login
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink href="/register">
+                <span class="oi oi-plus"></span> Register
+            </NavLink>
+        </div>
+        
+    </nav>
+</div>
+

@@ -1,0 +1,309 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|c:\\users\\admin\\source\\repos\\maptilemanager\\maptilemanager\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|solutionrelative:maptilemanager\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|c:\\users\\admin\\source\\repos\\maptilemanager\\maptilemanager\\wwwroot\\map.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|solutionrelative:maptilemanager\\wwwroot\\map.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|c:\\users\\admin\\source\\repos\\maptilemanager\\maptilemanager\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|solutionrelative:maptilemanager\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|c:\\users\\admin\\source\\repos\\maptilemanager\\maptilemanager\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|solutionrelative:maptilemanager\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|c:\\users\\admin\\source\\repos\\maptilemanager\\maptilemanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|solutionrelative:maptilemanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|c:\\users\\admin\\source\\repos\\maptilemanager\\maptilemanager\\jwttokenstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|solutionrelative:maptilemanager\\jwttokenstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|c:\\users\\admin\\source\\repos\\maptilemanager\\maptilemanager\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|solutionrelative:maptilemanager\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|c:\\users\\admin\\source\\repos\\maptilemanager\\maptilemanager\\models\\progressinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|solutionrelative:maptilemanager\\models\\progressinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|c:\\users\\admin\\source\\repos\\maptilemanager\\maptilemanager\\components\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|solutionrelative:maptilemanager\\components\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|c:\\users\\admin\\source\\repos\\maptilemanager\\maptilemanager\\components\\pages\\maplist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|solutionrelative:maptilemanager\\components\\pages\\maplist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|c:\\users\\admin\\source\\repos\\maptilemanager\\maptilemanager\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|solutionrelative:maptilemanager\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|c:\\users\\admin\\source\\repos\\maptilemanager\\maptilemanager\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|solutionrelative:maptilemanager\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|c:\\users\\admin\\source\\repos\\maptilemanager\\maptilemanager\\wwwroot\\images\\pavotek1_logo.jpeg||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|solutionrelative:maptilemanager\\wwwroot\\images\\pavotek1_logo.jpeg||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|c:\\users\\admin\\source\\repos\\maptilemanager\\maptilemanager\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|solutionrelative:maptilemanager\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|c:\\users\\admin\\source\\repos\\maptilemanager\\maptilemanager\\wwwroot\\bootstrap\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|solutionrelative:maptilemanager\\wwwroot\\bootstrap\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|c:\\users\\admin\\source\\repos\\maptilemanager\\maptilemanager\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|solutionrelative:maptilemanager\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|c:\\users\\admin\\source\\repos\\maptilemanager\\maptilemanager\\maptilemanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|solutionrelative:maptilemanager\\maptilemanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|c:\\users\\admin\\source\\repos\\maptilemanager\\maptilemanager\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6011F8C0-3F4C-4815-8FF5-BA0C93B09232}|MapTileManager\\MapTileManager.csproj|solutionrelative:maptilemanager\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JwtTokenStore.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\JwtTokenStore.cs",
+              "RelativeDocumentMoniker": "MapTileManager\\JwtTokenStore.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\JwtTokenStore.cs",
+              "RelativeToolTip": "MapTileManager\\JwtTokenStore.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T07:45:24.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Program.cs",
+              "RelativeDocumentMoniker": "MapTileManager\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Program.cs",
+              "RelativeToolTip": "MapTileManager\\Program.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAwDgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T07:45:44.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "MapTileManager\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "MapTileManager\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-18T07:46:09.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "MapTileManager\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "MapTileManager\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-18T07:53:33.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Map.html",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\wwwroot\\Map.html",
+              "RelativeDocumentMoniker": "MapTileManager\\wwwroot\\Map.html",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\wwwroot\\Map.html",
+              "RelativeToolTip": "MapTileManager\\wwwroot\\Map.html",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAAAKoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-07-21T07:34:51.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Components\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "MapTileManager\\Components\\Pages\\Login.razor",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Components\\Pages\\Login.razor",
+              "RelativeToolTip": "MapTileManager\\Components\\Pages\\Login.razor",
+              "ViewState": "AQIAABkAAAAAAAAAAAAAwEIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-18T07:44:38.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\appsettings.json",
+              "RelativeDocumentMoniker": "MapTileManager\\appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\appsettings.json",
+              "RelativeToolTip": "MapTileManager\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-18T07:56:13.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProgressInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Models\\ProgressInfo.cs",
+              "RelativeDocumentMoniker": "MapTileManager\\Models\\ProgressInfo.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Models\\ProgressInfo.cs",
+              "RelativeToolTip": "MapTileManager\\Models\\ProgressInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T12:01:19.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Register.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Components\\Pages\\Register.razor",
+              "RelativeDocumentMoniker": "MapTileManager\\Components\\Pages\\Register.razor",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Components\\Pages\\Register.razor",
+              "RelativeToolTip": "MapTileManager\\Components\\Pages\\Register.razor",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwDcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-18T08:57:49.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MapList.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Components\\Pages\\MapList.razor",
+              "RelativeDocumentMoniker": "MapTileManager\\Components\\Pages\\MapList.razor",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Components\\Pages\\MapList.razor",
+              "RelativeToolTip": "MapTileManager\\Components\\Pages\\MapList.razor",
+              "ViewState": "AQIAANkAAAAAAAAAAAAAwP8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-18T08:44:31.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "MapTileManager\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "MapTileManager\\Components\\Pages\\Home.razor",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAwEMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-21T10:04:28.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Error.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Components\\Pages\\Error.razor",
+              "RelativeDocumentMoniker": "MapTileManager\\Components\\Pages\\Error.razor",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Components\\Pages\\Error.razor",
+              "RelativeToolTip": "MapTileManager\\Components\\Pages\\Error.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-03T05:56:33.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "pavotek1_logo.jpeg",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\wwwroot\\images\\pavotek1_logo.jpeg",
+              "RelativeDocumentMoniker": "MapTileManager\\wwwroot\\images\\pavotek1_logo.jpeg",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\wwwroot\\images\\pavotek1_logo.jpeg",
+              "RelativeToolTip": "MapTileManager\\wwwroot\\images\\pavotek1_logo.jpeg",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-07-22T08:39:12.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\wwwroot\\app.css",
+              "RelativeDocumentMoniker": "MapTileManager\\wwwroot\\app.css",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\wwwroot\\app.css",
+              "RelativeToolTip": "MapTileManager\\wwwroot\\app.css",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAcwJQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-07-21T09:21:36.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MapTileManager.csproj",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\MapTileManager.csproj",
+              "RelativeDocumentMoniker": "MapTileManager\\MapTileManager.csproj",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\MapTileManager.csproj",
+              "RelativeToolTip": "MapTileManager\\MapTileManager.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-18T12:00:33.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "bootstrap.min.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\wwwroot\\bootstrap\\bootstrap.min.css",
+              "RelativeDocumentMoniker": "MapTileManager\\wwwroot\\bootstrap\\bootstrap.min.css",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\wwwroot\\bootstrap\\bootstrap.min.css",
+              "RelativeToolTip": "MapTileManager\\wwwroot\\bootstrap\\bootstrap.min.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-07-21T09:53:32.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Routes.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Components\\Routes.razor",
+              "RelativeDocumentMoniker": "MapTileManager\\Components\\Routes.razor",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Components\\Routes.razor",
+              "RelativeToolTip": "MapTileManager\\Components\\Routes.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-18T08:56:14.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "MapTileManager\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MapTileManager\\MapTileManager\\Properties\\launchSettings.json",
+              "RelativeToolTip": "MapTileManager\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACAAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-18T07:56:46.176Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

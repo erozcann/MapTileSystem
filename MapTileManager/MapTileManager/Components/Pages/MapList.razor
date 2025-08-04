@@ -1,0 +1,255 @@
+﻿@page "/maps"
+@rendermode InteractiveServer
+@inject HttpClient Http
+@inject NavigationManager Nav
+@inject IJSRuntime JS
+@implements IAsyncDisposable
+
+
+@if (progressMap.Any(p => p.Value.percent < 100))
+{
+    <h3>📥 İndirilen Haritalar</h3>
+    <ul style="list-style-type: none; padding: 0;">
+        @foreach (var kvp in progressMap.Where(p => p.Value.percent < 100))
+        {
+            <li style="margin-bottom: 10px;">
+                <strong>@kvp.Key</strong>
+                <div style="background-color: #eee; height: 18px; border-radius: 6px; overflow: hidden;">
+                    <div style="
+                        background-color: #4caf50;
+                        height: 100%;
+                        width: @kvp.Value.percent.ToString("F1")%;
+                        color: white;
+                        text-align: center;
+                        font-size: 12px;
+                        line-height: 18px;">
+                        @kvp.Value.percent.ToString("F1")%
+                    </div>
+                </div>
+                <span style="font-size: 12px; color: gray;">
+                    (@kvp.Value.downloaded / @kvp.Value.total)
+                </span>
+            </li>
+        }
+    </ul>
+}
+
+<h3>📍 Kayıtlı Haritalar</h3>
+
+@if (maps == null)
+{
+    <p>Yükleniyor...</p>
+}
+else if (!maps.Any())
+{
+    <p>Hiç kayıtlı harita bulunamadı.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>İsim</th>
+                <th>Tarih</th>
+                <th>Zoom</th>
+                <th>Koordinatlar</th>
+                <th>Yol</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var map in maps)
+            {
+                <tr>
+                    <td>@map.map_name</td>
+                    <td>@map.date</td>
+                    <td>@map.min_zoom - @map.max_zoom</td>
+                    <td>@map.coord1_lat,@map.coord1_lng → @map.coord2_lat,@map.coord2_lng</td>
+                    <td>@map.folder_path</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning" @onclick="() => UpdateMap(map)">Güncelle</button>
+                        <button class="btn btn-sm btn-danger" @onclick="() => DeleteMap(map.id)">Sil</button>
+                        <button class="btn btn-sm btn-primary" @onclick="() => ShowOnMap(map)">Haritada Göster</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@using System.Net.WebSockets
+@using System.Text
+@using System.Text.Json
+@using System.Threading
+
+@code {
+    private ClientWebSocket ws;
+    private CancellationTokenSource cts = new();
+    private Dictionary<string, ProgressInfo> progressMap = new();
+
+    private List<MapData> maps;
+
+   
+    private void ShowOnMap(MapData map)
+    {
+        try
+        {
+            var folderName = Path.GetFileName(map.folder_path);
+            if (string.IsNullOrEmpty(folderName))
+            {
+                folderName = map.folder_path.Split(Path.DirectorySeparatorChar).Last();
+            }
+            
+            // Çift alt çizgi sorununu düzelt - gerçek klasör adını kullan
+            // Gerçek klasör adı: sedef_2025_07_26__12_11 (sadece son kısımda çift alt çizgi)
+            // URL'de: sedef_2025_07_26___12_11 (3 alt çizgi)
+            // Düzeltme: Sadece son kısımda çift alt çizgi olsun
+            if (folderName.Contains("___"))
+            {
+                folderName = folderName.Replace("___", "__");
+            }
+
+            // minZoom ve maxZoom parametrelerini de ekle
+            var url = $"map.html" +
+    $"?lat1={map.coord1_lat.ToString(System.Globalization.CultureInfo.InvariantCulture)}" +
+    $"&lng1={map.coord1_lng.ToString(System.Globalization.CultureInfo.InvariantCulture)}" +
+    $"&lat2={map.coord2_lat.ToString(System.Globalization.CultureInfo.InvariantCulture)}" +
+    $"&lng2={map.coord2_lng.ToString(System.Globalization.CultureInfo.InvariantCulture)}" +
+    $"&mapFolder={Uri.EscapeDataString(folderName)}" +
+    $"&minZoom={map.min_zoom}&maxZoom={map.max_zoom}";
+
+            JS.InvokeVoidAsync("open", url, "_blank");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Harita gösterme hatası: {ex.Message}");
+            JS.InvokeVoidAsync("alert", $"Harita açılırken hata oluştu: {ex.Message}");
+        }
+    }
+
+
+    
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadMapsAsync();         // API'den map'leri çek
+        _ = ConnectToWebSocket();      // WebSocket'e bağlan (arkada çalışır)
+    }
+
+    private async Task LoadMapsAsync()
+    {
+        try
+        {
+            if (string.IsNullOrWhiteSpace(JwtTokenStore.Token))
+            {
+                Nav.NavigateTo("/login");
+                return;
+            }
+
+            Http.DefaultRequestHeaders.Authorization =
+                new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", JwtTokenStore.Token);
+
+            maps = await Http.GetFromJsonAsync<List<MapData>>("/api/maps");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Hata: " + ex.Message);
+        }
+    }
+
+    private async Task DeleteMap(int id)
+    {
+        await Http.DeleteAsync($"/api/maps/{id}");
+        await LoadMapsAsync();
+    }
+
+    private async Task UpdateMap(MapData map)
+    {
+        var newName = await JS.InvokeAsync<string>("prompt", $"Yeni isim girin (şu anki: {map.map_name})");
+        if (!string.IsNullOrWhiteSpace(newName) && newName != map.map_name)
+        {
+            map.map_name = newName;
+            await Http.PutAsJsonAsync($"/api/maps/{map.id}", map);
+            await LoadMapsAsync();
+        }
+    }
+
+    private async Task ConnectToWebSocket()
+    {
+        try
+        {
+            ws = new ClientWebSocket();
+            await ws.ConnectAsync(new Uri("ws://localhost:8181/ws"), cts.Token);
+          
+
+
+            var buffer = new byte[1024 * 4];
+
+            while (ws.State == WebSocketState.Open)
+            {
+                var result = await ws.ReceiveAsync(new ArraySegment<byte>(buffer), cts.Token);
+                if (result.MessageType == WebSocketMessageType.Text)
+                {
+                    var json = Encoding.UTF8.GetString(buffer, 0, result.Count);
+                    var progress = JsonSerializer.Deserialize<ProgressInfo>(json);
+
+                    if (progress != null && !string.IsNullOrWhiteSpace(progress.map))
+                    {
+                        var key = progress.map.ToLower();
+                        if (progress.percent >= 100)
+                        {
+                            _ = Task.Delay(2000).ContinueWith(async _ =>
+                            {
+                                progressMap.Remove(key);
+                                await LoadMapsAsync();
+                                await InvokeAsync(StateHasChanged);
+                            });
+                        }
+                        else
+                        {
+                            progressMap[key] = progress;
+                            await InvokeAsync(StateHasChanged);
+                        }
+                    }
+
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("WebSocket hata: " + ex.Message);
+        }
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        cts.Cancel();
+        if (ws != null && ws.State == WebSocketState.Open)
+        {
+            await ws.CloseAsync(WebSocketCloseStatus.NormalClosure, "Kapatılıyor", CancellationToken.None);
+            ws.Dispose();
+        }
+    }
+
+    public class ProgressInfo
+    {
+        public string map { get; set; }
+        public double percent { get; set; }
+        public int downloaded { get; set; }
+        public int total { get; set; }
+    }
+
+    public class MapData
+    {
+        public int id { get; set; }
+        public string map_name { get; set; }
+        public string date { get; set; }
+        public int min_zoom { get; set; }
+        public int max_zoom { get; set; }
+        public double coord1_lat { get; set; }
+        public double coord1_lng { get; set; }
+        public double coord2_lat { get; set; }
+        public double coord2_lng { get; set; }
+        public string folder_path { get; set; }
+    }
+}

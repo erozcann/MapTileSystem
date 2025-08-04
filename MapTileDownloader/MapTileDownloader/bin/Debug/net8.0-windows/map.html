@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Map</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='stylesheet' href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css' />
+    <style>html, body, #map { height: 100%; margin: 0; padding: 0; } .rect { background: rgba(0, 128, 255, 0.2); border: 2px solid #0078ff; }</style>
+</head>
+<body>
+    <div id='map' style='width:100%;height:100vh;'></div>
+    <script src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'></script>
+    <script>
+        var map = L.map('map').setView([39.92, 32.85], 6);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+        var markers = [];
+        var rectangle = null;
+        function updateRectangle() {
+            if (rectangle) { map.removeLayer(rectangle); }
+            if (markers.length == 2) {
+                var bounds = L.latLngBounds(markers[0].getLatLng(), markers[1].getLatLng());
+                rectangle = L.rectangle(bounds, {color: '#0078ff', weight: 2, fillOpacity: 0.2});
+                rectangle.addTo(map);
+            }
+        }
+        map.on('click', function(e) {
+            if (markers.length < 2) {
+                var marker = L.marker(e.latlng, {draggable:true}).addTo(map);
+                marker.on('drag', updateRectangle);
+                marker.on('dragend', updateRectangle);
+                markers.push(marker);
+                updateRectangle();
+            }
+        });
+        window.clearMarkers = function() {
+            markers.forEach(m => map.removeLayer(m));
+            markers = [];
+            if (rectangle) { map.removeLayer(rectangle); rectangle = null; }
+        }
+        window.getRectangleCoords = function() {
+            if (markers.length == 2) {
+                return JSON.stringify({
+                    p1: markers[0].getLatLng(),
+                    p2: markers[1].getLatLng()
+                });
+            }
+            return null;
+        }
+    </script>
+</body>
+</html>

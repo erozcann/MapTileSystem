@@ -1,0 +1,66 @@
+﻿@page "/login"
+@rendermode InteractiveServer
+@inject HttpClient Http
+@inject NavigationManager Nav
+
+<h3>Giriş Yap</h3>
+
+<div>
+    <label for="username">Kullanıcı Adı:</label>
+    <input id="username" @bind="username" />
+</div>
+<div>
+    <label for="password">Şifre:</label>
+    <input id="password" type="password" @bind="password" />
+</div>
+
+<button @onclick="LoginUser">Giriş</button>
+
+<p style="color:red">@errorMessage</p>
+
+@code {
+    private string? username;
+    private string? password;
+    private string? errorMessage;
+
+    private async Task LoginUser()
+    {
+        try
+        {
+            Console.WriteLine("🚀 LoginUser() çalıştı");
+
+            var response = await Http.PostAsJsonAsync("/login", new
+            {
+                Username = username,
+                Password = password
+            });
+
+            Console.WriteLine("📡 İstek gönderildi");
+            Console.WriteLine("✅ Durum: " + response.StatusCode);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadFromJsonAsync<JwtResponse>();
+                JwtTokenStore.Token = json?.token ?? "";
+                Console.WriteLine("🎟️ TOKEN: " + JwtTokenStore.Token);
+                Nav.NavigateTo("/maps");
+            }
+            else
+            {
+                errorMessage = "Giriş başarısız.";
+                Console.WriteLine("❌ Login başarısız.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("💥 HATA: " + ex.Message);
+            errorMessage = "Bir hata oluştu: " + ex.Message;
+        }
+    }
+
+
+    class JwtResponse
+    {
+        public string? token { get; set; }
+    }
+}

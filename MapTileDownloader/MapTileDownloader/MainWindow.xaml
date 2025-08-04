@@ -1,0 +1,39 @@
+﻿<Window x:Class="MapTileDownloader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        Title="Map Tile Downloader" Height="700" Width="900" Background="#f8fafc">
+    <Grid Margin="30">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Sol Panel: Harita ve Alan Seçimi -->
+        <Border Grid.Column="0" CornerRadius="18" Background="#fff" Padding="18" Margin="0,0,18,0">
+            <StackPanel>
+                <TextBlock Text="Harita Alanı" FontSize="22" FontWeight="Bold" Foreground="#2d3748" Margin="0,0,0,12"/>
+                <wv2:WebView2 x:Name="MapWebView" Height="520" Margin="0,0,0,0"/>
+            </StackPanel>
+        </Border>
+        <!-- Sağ Panel: İndirme ve Bilgi -->
+        <Border Grid.Column="1" CornerRadius="18" Background="#fff" Padding="18">
+            <StackPanel>
+                <TextBlock Text="Harita Adı:" FontWeight="SemiBold" FontSize="16"/>
+                <TextBox x:Name="MapNameTextBox" Height="32" FontSize="15" Margin="0,0,0,12" Padding="8" BorderBrush="#38bdf8" BorderThickness="1.5"/>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                    <TextBlock Text="Zoom Seviyesi (Min - Max):" FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                    <ComboBox x:Name="MinZoomComboBox" Width="50" Margin="0,0,6,0"/>
+                    <TextBlock Text="-" FontWeight="Bold" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="MaxZoomComboBox" Width="50" Margin="6,0,0,0"/>
+                </StackPanel>
+                <Button x:Name="CalculateTilesButton" Content="Tile Sayısını Hesapla" Height="36" Margin="0,0,0,8" Background="#38bdf8" Foreground="White" FontWeight="Bold" BorderThickness="0"/>
+                <TextBlock x:Name="TileCountTextBlock" FontSize="16" FontWeight="SemiBold" Foreground="#0ea5e9" Margin="0,0,0,8"/>
+                <Button x:Name="StartDownloadButton" Content="İndirmeyi Başlat" Height="40" Background="#22c55e" Foreground="White" FontWeight="Bold" BorderThickness="0" Margin="0,0,0,12"/>
+                <ProgressBar x:Name="DownloadProgressBar" Height="28" Margin="0,0,0,8" Maximum="100" Background="#e0e7ef" Foreground="#38bdf8"/>
+                <TextBlock x:Name="PercentTextBlock" FontSize="20" FontWeight="Bold" Foreground="#0ea5e9" Margin="0,0,0,8"/>
+                <TextBlock x:Name="ProgressTextBlock" FontSize="15" FontWeight="SemiBold" Foreground="#64748b" Margin="0,0,0,8"/>
+                <Button x:Name="OpenFolderButton" Content="Klasörü Aç" Height="36" Background="#6366f1" Foreground="White" FontWeight="Bold" BorderThickness="0" Visibility="Collapsed"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

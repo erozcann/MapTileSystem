@@ -1,0 +1,55 @@
+﻿@page "/register"
+@rendermode InteractiveServer
+@inject HttpClient Http
+@inject NavigationManager Nav
+
+<h3>Yeni Kullanıcı Kaydı</h3>
+
+<div>
+    <label for="username">Kullanıcı Adı:</label>
+    <input id="username" @bind="username" />
+</div>
+<div>
+    <label for="password">Şifre:</label>
+    <input id="password" type="password" @bind="password" />
+</div>
+
+<button @onclick="RegisterUser">Kayıt Ol</button>
+
+<p style="color:green">@successMessage</p>
+<p style="color:red">@errorMessage</p>
+
+@code {
+    private string? username;
+    private string? password;
+    private string? successMessage;
+    private string? errorMessage;
+
+    private async Task RegisterUser()
+    {
+        try
+        {
+            var response = await Http.PostAsJsonAsync("/register", new
+            {
+                Username = username,
+                Password = password
+            });
+
+            if (response.IsSuccessStatusCode)
+            {
+                successMessage = "Kayıt başarılı. Giriş sayfasına yönlendiriliyorsunuz...";
+                await Task.Delay(2000);
+                Nav.NavigateTo("/login");
+            }
+            else
+            {
+                var error = await response.Content.ReadAsStringAsync();
+                errorMessage = "Hata: " + error;
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "HATA: " + ex.Message;
+        }
+    }
+}

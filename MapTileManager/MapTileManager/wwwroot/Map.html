@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Offline Harita Görüntüleyici</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='stylesheet' href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css' />
+    <!-- Offline için: <link rel='stylesheet' href='lib/leaflet/leaflet.css' /> -->
+    <style>
+        html, body, #map {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        .error {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #ff4444;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            z-index: 1000;
+            display: none;
+        }
+        
+        .info-panel {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div id='map'></div>
+    
+    <div id="loading" class="loading">
+        <strong>Offline harita yükleniyor...</strong><br>
+        <small>Bu işlem biraz zaman alabilir</small>
+    </div>
+    
+    <div id="error" class="error">
+        <strong>Hata:</strong> <span id="errorText"></span>
+    </div>
+    
+    <div class="info-panel">
+        <strong>Offline Harita</strong><br>
+        <span id="mapInfo"></span>
+    </div>
+    
+    <script src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'></script>
+    <!-- Offline için: <script src='lib/leaflet/leaflet.js'></script> -->
+    <script>
+        function getParam(name) {
+            const url = new URL(window.location.href);
+            return url.searchParams.get(name);
+        }
+
+        function showError(message) {
+            document.getElementById('errorText').textContent = message;
+            document.getElementById('error').style.display = 'block';
+            document.getElementById('loading').style.display = 'none';
+        }
+
+        function hideLoading() {
+            document.getElementById('loading').style.display = 'none';
+        }
+
+        function updateMapInfo() {
+            const mapInfo = document.getElementById('mapInfo');
+            mapInfo.innerHTML = `
+                Koordinatlar: ${lat1.toFixed(4)}, ${lng1.toFixed(4)} → ${lat2.toFixed(4)}, ${lng2.toFixed(4)}<br>
+                Klasör: ${mapFolder}
+            `;
+        }
+
+        // URL parametrelerini al
+        var lat1 = parseFloat(getParam("lat1"));
+        var lng1 = parseFloat(getParam("lng1"));
+        var lat2 = parseFloat(getParam("lat2"));
+        var lng2 = parseFloat(getParam("lng2"));
+        var mapFolder = getParam("mapFolder");
+
+        // Parametre kontrolü
+        if (!lat1 || !lng1 || !lat2 || !lng2 || !mapFolder) {
+            showError("Eksik parametreler. Lütfen harita listesinden tekrar deneyin.");
+            throw new Error("Eksik parametreler");
+        }
+
+        var centerLat = (lat1 + lat2) / 2.0;
+        var centerLng = (lng1 + lng2) / 2.0;
+
+        var minZoom = parseInt(getParam("minZoom")) || 1;
+        var maxZoom = parseInt(getParam("maxZoom")) || 19;
+
+        // Haritayı oluştur
+        var map = L.map('map', {
+            center: [centerLat, centerLng],
+            zoom: minZoom,
+            minZoom: minZoom,
+            maxZoom: maxZoom
+        });
+
+        // Offline tile layer'ı oluştur - WPF uygulamasıyla aynı algoritma
+        var offlineTiles = L.tileLayer('/tiles/' + mapFolder + '/{z}/{x}/{y}.png', {
+            minZoom: minZoom,
+            maxZoom: maxZoom,
+            attribution: 'Offline Tiles - ' + mapFolder,
+            errorTileUrl: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==',
+         
+            
+        });
+
+        // Tile yükleme hatalarını yakala
+        offlineTiles.on('tileerror', function(e) {
+            console.warn('Tile yüklenemedi:', e.url);
+        });
+
+        // Tile layer'ı haritaya ekle
+        offlineTiles.addTo(map);
+
+        // Seçilen alanı dikdörtgen olarak göster
+        var bounds = [[lat1, lng1], [lat2, lng2]];
+        var rectangle = L.rectangle(bounds, { 
+            color: '#0078ff', 
+            weight: 2, 
+            fillOpacity: 0.2,
+            fillColor: '#0078ff'
+        }).addTo(map);
+
+        // Haritayı seçilen alana sığdır
+        map.fitBounds(bounds, { maxZoom: maxZoom });
+
+        // Loading'i gizle
+        setTimeout(hideLoading, 1000);
+
+        // Harita bilgilerini güncelle
+        updateMapInfo();
+
+        // Zoom değişikliklerini dinle
+        map.on('zoomend', function() {
+            console.log('Mevcut zoom seviyesi:', map.getZoom());
+        });
+
+        // Harita yüklendiğinde
+        map.whenReady(function() {
+            console.log('Offline harita başarıyla yüklendi');
+            hideLoading();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7faff;
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    min-width: 220px;
+    max-width: 220px;
+    height: 100vh;
+    background: linear-gradient(180deg, #6db3f2 0%, #2978b5 60%, #35055a 100%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    box-shadow: 2px 0 18px #0002;
+    transition: transform 0.3s;
+}
+
+.logo-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #ffffff2c;
+    padding: 32px 0 18px 0;
+    margin-bottom: 18px;
+}
+
+    .logo-area img {
+        height: 60px;
+        width: auto;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0 2px 12px #24245119;
+        margin-bottom: 10px;
+    }
+
+    .logo-area .title {
+        font-size: 1.23rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: #f2f8ff;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+.nav-scrollable {
+    flex: 1 1 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sidebar nav {
+    width: 100%;
+}
+
+.nav-item {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.nav-link, .nav-link:visited {
+    color: #eaf1fd;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.08rem;
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    transition: background 0.15s, color 0.18s;
+}
+
+    .nav-link.active,
+    .nav-link:hover {
+        color: #fff;
+        background: #1976d288;
+    }
+
+main {
+    flex: 1 1 auto;
+    min-height: 100vh;
+    margin-left: 220px;
+    background: #f7faff;
+    transition: margin 0.3s;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 36px;
+}
+
+@media (max-width: 950px) {
+    .sidebar {
+        transform: translateX(-240px);
+        box-shadow: none;
+    }
+
+        .sidebar.open {
+            transform: translateX(0);
+            box-shadow: 2px 0 24px #0004;
+        }
+
+    main {
+        margin-left: 0 !important;
+    }
+}
+
+.sidebar-backdrop {
+    display: none;
+}
+
+@media (max-width: 950px) {
+    .sidebar-backdrop {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 99;
+        background: #0006;
+    }
+}
+
+.d-lg-none {
+    display: none;
+}
+
+@media (max-width: 950px) {
+    .d-lg-none {
+        display: block !important;
+    }
+}
